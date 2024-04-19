@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./src/assets/facebook_icon.svg" type="image/x-icon">
+    <title>Entrar</title>
+</head>
+<body class="relative">
+   <div class="modal bg-white/75 w-screen h-screen absolute hidden">
+    <div class="bg-white shadow-lg h-[400px] w-380 p-4 absolute m-auto top-0 bottom-0 left-0 right-0">
+        <header class="mb-1 flex justify-between items-center">
+           <div>
+                <h2 class="font-bold text-2xl">Cadastra-se</h2>
+                <p class="font-light text-base">É rápido e fácil</p>
+           </div>
+           <h3 onclick="handleClose()" class="cursor-pointer">X</h3>
+        </header>
+        <hr class="w-full m-2 border-gray-300">
+        <div class="flex flex-col items-center">
+            <div class="grid grid-cols-2 gap-x-2">
+                <input type="text" id="nameSignUp" placeholder="Nome" class="input signUp">
+                <input type="text" id="secondSignUp" placeholder="Sobrenome" class="input signUp">
+                <input type="text" placeholder="Celular ou email" id="emailSignUp" class="input signUp col-span-2">
+                <input type="password" id="passwordSignUp" placeholder="Nova senha" class="input signUp col-span-2">
+            </div>
+            <button onclick="registerSubmit()" class="btnSubmit h-10 bg-green-btn rounded-md text-white font-bold px-10 text-center mt-4 hover:bg-green-800">Cadastre-se</button>
+        </div>
+    </div>
+   </div>
+
+    <div class="w-screen h-screen bg-gray-bg flex flex-col items-center justify-center p-4 lg:flex-row">
+        <div class="w-580 pr-8 flex flex-col items-center lg:items-start">
+            <h1 class="text-blue-facebook font-bold text-5xl">facebook</h1>
+            <p class="text-2xl text-black font-medium text-justify w-3/4 " >O Facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</p>
+        </div>
+
+  
+        <div class="bg-white p-4 w-380 h-[300px] rounded-md flex flex-col items-center justify-center shadow-lg mt-10 lg:mt-0">
+            <input id="inputUser" type="text"  placeholder="Nome" class="input signIn">
+            <input type="password"  placeholder="Senha" class="input signIn">
+
+            <button onclick="loginSubmit()" class="h-12 w-full bg-blue-facebook rounded-md text-white font-bold">Entrar</button>
+            <a href="./src/pages/find.html" class="text-blue-facebook cursor-pointer mt-4 text-sm">Esqueceu sua senha?</a>
+            <hr class="w-full m-4 border-gray-300">
+            <button  onclick="newProfile()" class="h-12 cursor-pointer bg-green-btn rounded-md text-white font-bold px-4 text-center">Criar nova conta</button>
+        </div>
+    </div>
+
+    <script src="./src/scripts/main.js"></script>
+</body>
+</html>
